@@ -5,12 +5,19 @@ namespace bankapp;
 
 class program
 {
-    static void main(String[] args)
+    static void Main(String[] args)
     {
-        Console.WriteLine("if you want to register press1 if you want to login press2");
-            string n = Console.ReadLine();
+        var reg = new Register();
+        reg.Details();
+        var logs = new login();
+        logs.Log();
 
-            if (n == "1")
+
+       // Console.WriteLine("if you want to register press1 if you want to login press2");
+
+           // string n = Console.ReadLine();
+
+            /*if (n == "1")
             {
             register();
             }
@@ -18,9 +25,7 @@ class program
             {
             login();
             }
-            else (n != 1 || n != 2)
+            else (n != 1 || n != 2)*/
     }
-   
-   
     
 }
