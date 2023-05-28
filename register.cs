@@ -10,30 +10,30 @@ namespace taskwk3
 {
     internal class Register
     {
-        public string Firstname = "";
-        public string Lastname = "";
-        public string Email = "";
-        public string Accounttype = "";
-        public string Password = "";
+        public static string Firstname = "";
+        public static string Lastname = "";
+        public static string Email = "";
+        public static string Accounttype = "";
+        public static string Password = "";
 
         public void Details()
         {
             Console.WriteLine("pls enter your firstname");
-            Firstname = Console.ReadLine();
-            Firstname += Firstname;
+            string fname = Console.ReadLine();
+            Firstname += fname;
             Console.WriteLine("pls enter your lastname");
-            Lastname = Console.ReadLine();
-            Lastname += Lastname;
+            string lname = Console.ReadLine();
+            Lastname += lname;
             Console.WriteLine("pls enter your email");
-            Email = Console.ReadLine();
-            Email += Email;
+            string email = Console.ReadLine();
+            Email += email;
             Console.WriteLine("press 1 for savings, press 2 for current");
-            Accounttype = Console.ReadLine();
-            if (Accounttype == "1") 
+            string acctype = Console.ReadLine();
+            if (acctype == "1") 
             {
                 Accounttype +="savings";
             }
-            else if  (Accounttype == "2")
+            else if  (acctype == "2")
             {
                 Accounttype += "current";
             }
