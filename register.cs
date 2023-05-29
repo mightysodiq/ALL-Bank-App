@@ -1,34 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Runtime.ExceptionServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
+using System.Text.RegularExpressions;
 
 namespace taskwk3
 {
     internal class Register
     {
+        
+
         public static string Firstname = "";
         public static string Lastname = "";
         public static string Email = "";
         public static string Accounttype = "";
         public static string Password = "";
+        public static int Balance = 0;
+        
+        
 
         public void Details()
         {
-            Console.WriteLine("pls enter your firstname");
+            
+
+        Console.WriteLine("Please enter your firstname:");
             string fname = Console.ReadLine();
             Firstname += fname;
-            Console.WriteLine("pls enter your lastname");
+
+            Console.WriteLine("Please enter your lastname:");
             string lname = Console.ReadLine();
             Lastname += lname;
-            Console.WriteLine("pls enter your email");
+
+            Console.WriteLine("Please enter your email:");
             string email = Console.ReadLine();
             Email += email;
-            Console.WriteLine("press 1 for savings, press 2 for current");
+
+            Console.WriteLine("Press 1 for savings, press 2 for current:");
             string acctype = Console.ReadLine();
             if (acctype == "1")
             {
@@ -38,20 +42,41 @@ namespace taskwk3
             {
                 Accounttype += "current";
             }
-            else  
+            else
             {
-                Console.WriteLine("pls, input the right number");
+                Console.WriteLine("Please input the right number.");
             }
-            Console.WriteLine("enter your password");
-            Password = Console.ReadLine();
-            Console.WriteLine("here are your details below");
-            Console.WriteLine($"firstname: {Firstname}");
-            Console.WriteLine($"lastname:{Lastname}");
-            Console.WriteLine($"email: {Email}");
-            Console.WriteLine($"accounttype: {Accounttype}");
-            Console.WriteLine($"password: {Password}");
-        }
-    }  
-    
 
+            ValidatePassword();
+
+            Console.WriteLine("Here are your details below:");
+            Console.WriteLine($"Firstname: {Firstname}");
+            Console.WriteLine($"Lastname: {Lastname}");
+            Console.WriteLine($"Email: {Email}");
+            Console.WriteLine($"Accounttype: {Accounttype}");
+            Console.WriteLine($"Password: {Password}");
+            Console.WriteLine($"Your Balance is: {Balance}");
+        }
+
+        private void ValidatePassword()
+        {
+            bool isValidPassword = false;
+            while (!isValidPassword)
+            {
+                Console.WriteLine("Enter your password (minimum 6 characters including alphanumeric and at least one special character):");
+                Password = Console.ReadLine();
+
+                // Password validation using regular expression
+                string passwordPattern = @"^(?=.*[@#$%^&!])(?=.*[a-zA-Z0-9]).{6,}$";
+                if (Regex.IsMatch(Password, passwordPattern))
+                {
+                    isValidPassword = true;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid password. Please make sure your password is minimum 6 characters, including alphanumeric and at least one special character (@, #, $, %, ^, &, !).");
+                }
+            }
+        }
+    }
 }

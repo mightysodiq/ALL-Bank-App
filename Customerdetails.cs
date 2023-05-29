@@ -15,8 +15,9 @@ namespace taskwk3
         public double dateofbirth;
         public int Phonenumber;
         public string accounttype;
+        public int balance;
 
-        public Customerdetails(string firstname, string lastname, int accountnumber, double dateofbirth, int phonenumber, string accounttype)
+        public Customerdetails(string firstname, string lastname, int accountnumber, double dateofbirth, int phonenumber, string accounttype, int balance)
         {
             this.firstname = firstname;
             this.lastname = lastname;
@@ -24,6 +25,7 @@ namespace taskwk3
             this.dateofbirth = dateofbirth;
             Phonenumber = phonenumber;
             this.accounttype = accounttype;
+            this.balance = balance;
         }
         
 
