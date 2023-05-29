@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Runtime.ExceptionServices;
 using System.Text;
@@ -29,13 +30,17 @@ namespace taskwk3
             Email += email;
             Console.WriteLine("press 1 for savings, press 2 for current");
             string acctype = Console.ReadLine();
-            if (acctype == "1") 
+            if (acctype == "1")
             {
-                Accounttype +="savings";
+                Accounttype += "savings";
             }
-            else if  (acctype == "2")
+            else if (acctype == "2")
             {
                 Accounttype += "current";
+            }
+            else  
+            {
+                Console.WriteLine("pls, input the right number");
             }
             Console.WriteLine("enter your password");
             Password = Console.ReadLine();

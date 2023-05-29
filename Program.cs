@@ -11,6 +11,10 @@ class program
         reg.Details();
         var logs = new login();
         logs.Log();
+        var tra = new Transaction();
+        tra.deposit();
+        var mens = new menu();
+        mens.men();
 
 
        // Console.WriteLine("if you want to register press1 if you want to login press2");

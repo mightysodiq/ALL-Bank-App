@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +13,7 @@ namespace taskwk3
     {
         string myemail;
         string mypassword;
+        String AccountNo;
 
         
       public void Log()
@@ -19,45 +22,22 @@ namespace taskwk3
             Console.WriteLine("enter your email address");
         myemail = Console.ReadLine();
         Console.WriteLine("enter your password");
-        mypassword = Console.ReadLine(); 
-            if(myemail == Email && mypassword == Password) 
+        mypassword = Console.ReadLine();
+            if (myemail == Email && mypassword == Password)
             {
                 Console.WriteLine("Successful Login");
-                Console.WriteLine($"welcome{Firstname} to the best bank in the world!" );
-                Console.WriteLine("press 1 for deposit, 2 for withdrawal ,3 for account statement, 4 for account balance, 5 to transfer, 6 to LOG OUT" );
-                string click  = Console.ReadLine();
-                if (click == "1")
-                {
-                    Console.WriteLine ("how much do you want to deposit ");
-                }
-                else if (click == "2")
-                {
-                    Console.WriteLine("how much do you want to withdraw");
-                }
-                else if (click == "3")
-                {
-                    Console.WriteLine("here is your account statement");
-                }
-                else if (click == "4")
-                {
-                    Console.WriteLine("here is your account balance");
-                }
-                else if (click == "5")
-                {
-                    Console.WriteLine("enter the account number you wish to send money");
-                }
-                else if (click == "6") 
-                {
-                    Console.WriteLine($"-------GOODBYE {Firstname} -----------");
-                }
-                else
-                {
-                    Console.WriteLine("you have enter an invalid number");
-                }
-            }
+                Console.WriteLine($"welcome  {Firstname} to the best bank in the world!");
+                Random random = new Random();
+                int  i = random.Next(1000000000,2100000000);
+                AccountNo = i.ToString();
+                Console.WriteLine($"your accoount number is {AccountNo}");
+                Console.WriteLine($"your full name is{Firstname} {Lastname} ");
+                Console.WriteLine("press 1 to go to menu");     
+
+            }    
             else
             {
-                Console.WriteLine("invalid Email and Password");
+                Log();
             }
 
             
