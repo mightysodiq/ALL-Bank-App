@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using ConsoleTables;
 
 namespace taskwk3
 {
@@ -49,9 +50,14 @@ namespace taskwk3
 
             ValidatePassword();
 
+            var table = new ConsoleTable("FULLNAME", "ACCOUNT TYPE", "BALANCE");
+            table.AddRow(Firstname + Lastname, Accounttype, Balance);
+            table.Write();
+
             Console.WriteLine("Here are your details below:");
             Console.WriteLine($"Firstname: {Firstname}");
             Console.WriteLine($"Lastname: {Lastname}");
+            Console.WriteLine($"Fullname: {Firstname} + {Lastname}");
             Console.WriteLine($"Email: {Email}");
             Console.WriteLine($"Accounttype: {Accounttype}");
             Console.WriteLine($"Password: {Password}");

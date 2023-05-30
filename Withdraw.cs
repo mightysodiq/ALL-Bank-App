@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace taskwk3
 {
-    internal class Withdraw:Deposit
+    internal class Withdraw:Register
     {
-        public string with = "";
+        public int Amount;
 
         public void withdraw() 
         {
-            Console.WriteLine("How Much Do you want to Withdraw?");
-            string with =Console.ReadLine();
-            Withdraw draw = new Withdraw();
+            Console.Write("How Much Do you want to Withdraw: ");
+             Amount = Convert.ToInt32(Console.ReadLine());
+            Balance -= Amount;
+            Console.WriteLine($"Your Balance is: {Balance}");
+            Console.WriteLine("Enter 1 to go back to menu");
+            string input = Console.ReadLine();
+            if (input == "1")
+            {
+                menu menu = new menu();
+                menu.men();
+            }
         }
 
     }

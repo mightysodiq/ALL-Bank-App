@@ -20,6 +20,7 @@ namespace taskwk3
 
         public void Log()
         {
+            //Console.Clear();
              Console.WriteLine("--------WELCOME TO THE LOGIN PORTAL----------");
             Console.WriteLine("enter your email address");
             myemail = Console.ReadLine();
@@ -33,7 +34,8 @@ namespace taskwk3
                  int i = random.Next(1000000000, 2100000000);
                  AccountNo = i.ToString();
                  Console.WriteLine($"your accoount number is {AccountNo}");
-                 Console.WriteLine($"your full name is{Firstname} {Lastname} ");
+                 Console.WriteLine($"your full name is{Firstname}{Lastname}");
+                 Console.Clear();
                  Console.WriteLine("press 1 to go to menu");
                  string clck = Console.ReadLine();
                 if (clck == "1")
@@ -46,7 +48,6 @@ namespace taskwk3
                     Console.WriteLine("enter correct number");
                     Log();
                 }
-
             }
              else
              {

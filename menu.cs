@@ -30,7 +30,7 @@ namespace taskwk3
                 }
                 else if (click == "4")
                 {
-                    Console.WriteLine("here is your account balance");
+                    Console.WriteLine($"here is your account balance:{Balance}");
                 }
                 else if (click == "5")
                 {

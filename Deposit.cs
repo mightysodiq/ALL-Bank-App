@@ -12,11 +12,19 @@ namespace taskwk3
 
         public void deposit()
         {
-            
+            Console.Clear();
             Console.WriteLine($"Welcome {Firstname} your account type is {Accounttype}");
             Console.Write("How much do you want to Deposit: ");
             Amount = Convert.ToInt32(Console.ReadLine());
-            Balance += Amount;
+            Balance += Amount;  
+            Console.WriteLine($"Your Balance is: {Balance}");
+            Console.WriteLine("Enter 1 to go back to menu");
+            string input = Console.ReadLine();
+            if (input == "1")
+            {
+                menu menu = new menu();
+                menu.men();
+            }
         }
     }
 }
