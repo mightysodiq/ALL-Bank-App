@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleTables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,10 @@ namespace taskwk3
             Amount = Convert.ToInt32(Console.ReadLine());
             Balance += Amount;  
             Console.WriteLine($"Your Balance is: {Balance}");
+            var table = new ConsoleTable("FIRSTNAME", "ACCOUNTTYPE","AMOUNT","BALANCE");
+            table.AddRow(Firstname + Lastname, Accounttype, Amount, Balance);
+            table.Write();
+
             Console.WriteLine("Enter 1 to go back to menu");
             string input = Console.ReadLine();
             if (input == "1")
