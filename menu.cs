@@ -10,7 +10,13 @@ namespace taskwk3
     {
         public void men() 
         {
-            Console.WriteLine("press 1 for deposit, 2 for withdrawal ,3  for Transfer, 4 for account balance, 5 to for account statement, 6 to LOG OUT");
+            Console.WriteLine("PRESS 1 FOR DEPOSIT");
+            Console.WriteLine("PRESS 2 FOR WITHDRAWAL");
+            Console.WriteLine("PRESS 3 FOR TRANSFER");
+            Console.WriteLine("PRESS 4 FOR ACCOUNT BALANCE");
+            Console.WriteLine("PRESS 5 FOR ACCOUNT STATEMENT");
+            Console.WriteLine("PRESS 6 TO CREAT A NEW ACCOUNT");
+            Console.WriteLine("PRESS 7 TO LOG OUT");
             string click = Console.ReadLine();
             
                 if (click == "1")
@@ -37,6 +43,10 @@ namespace taskwk3
                     Console.WriteLine("here is your account statement");
                 }
                 else if (click == "6")
+                {
+                     Details();
+                }
+                else if (click == "7")
                 {
                     Console.WriteLine($"-------GOODBYE {Firstname} -----------");
                 }

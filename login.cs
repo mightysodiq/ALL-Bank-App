@@ -22,19 +22,19 @@ namespace taskwk3
         {
             //Console.Clear();
              Console.WriteLine("--------WELCOME TO THE LOGIN PORTAL----------");
-            Console.WriteLine("enter your email address");
+            Console.WriteLine("ENTER YOUR EMAIL ADDRESS;");
             myemail = Console.ReadLine();
-            Console.WriteLine("enter your password");
+            Console.WriteLine("ENTER YOUR PASSWORD;");
             mypassword = Console.ReadLine();
             if (myemail == Email && mypassword == Password)
             {
-                 Console.WriteLine("Successful Login");
-                 Console.WriteLine($"welcome  {Firstname} to the best bank in the world!");
+                 Console.WriteLine("|------------SUCCESSFUL LOGIN--------------------|");
+                 Console.WriteLine($"WELCOME! {Firstname} TO THE BEST BANK IN THE WORLD!");
                  Random random = new Random();
                  int i = random.Next(1000000000, 2100000000);
                  AccountNo = i.ToString();
-                 Console.WriteLine($"your accoount number is {AccountNo}");
-                 Console.WriteLine($"your full name is{Firstname}{Lastname}");
+                 Console.WriteLine($"YOUR ACCOUNT NUMBER IS: {AccountNo}");
+                 Console.WriteLine($"YOUR FULLNAME IS:{Firstname} {Lastname}");
                  Console.Clear();
                  Console.WriteLine("press 1 to go to menu");
                  string clck = Console.ReadLine();
@@ -45,7 +45,7 @@ namespace taskwk3
                 }
                 else
                 {
-                    Console.WriteLine("enter correct number");
+                    Console.WriteLine("ENTER CORRECT NUMBER!");
                     Log();
                 }
             }
