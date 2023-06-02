@@ -25,7 +25,7 @@ namespace taskwk3
             string fname = Console.ReadLine();
 
             Firstname += fname;
-
+             
             Console.WriteLine("Please enter your lastname:");
             string lname = Console.ReadLine();
             Lastname += lname;

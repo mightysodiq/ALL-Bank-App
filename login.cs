@@ -38,7 +38,7 @@ namespace taskwk3
                  Console.Clear();
                  Console.WriteLine("press 1 to go to menu");
                  string clck = Console.ReadLine();
-                if (clck == "1")
+                if (clck == "1") 
                 {
                     menu mens = new menu();
                     mens.men();

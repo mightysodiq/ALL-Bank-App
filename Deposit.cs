@@ -32,6 +32,7 @@ namespace taskwk3
             Console.WriteLine("|FIRSTNAME|ACCOUNTTYPE|AMOUNT|BALANCE|DATE AND TIME |");
             Console.WriteLine("|---------|-----------|------|-------|--------------|");
             Console.WriteLine (Print);
+            Console.WriteLine("|---------------------------------------------------|");
 
 
 
