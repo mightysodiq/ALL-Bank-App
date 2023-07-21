@@ -1,4 +1,4 @@
 # ALL-Bank-App
 
-A desktop app using Window Forms. 
+A console bank app. 
 Technologies Used: C#, OOP, SOLID principle, Json, Ado.Net, MySQL, WINFORM. 
