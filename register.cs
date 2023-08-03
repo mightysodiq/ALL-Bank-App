@@ -19,9 +19,10 @@ namespace taskwk3
 
         public void Details()
         {
-            
-
-        Console.WriteLine("Please enter your firstname:");
+            Console.WriteLine("|------------------------------------|");
+            Console.WriteLine("|--------WELCOME TO ALL BANK---------|");
+            Console.WriteLine("|------------------------------------|");
+            Console.WriteLine("Please enter your firstname:");
             string fname = Console.ReadLine();
 
             Firstname += fname;
