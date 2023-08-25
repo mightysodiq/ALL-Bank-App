@@ -31,10 +31,8 @@ namespace taskwk3
             Console.WriteLine("|---------|-----------|------|-------|--------------|");
             Console.WriteLine("|FIRSTNAME|ACCOUNTTYPE|AMOUNT|BALANCE|DATE AND TIME |");
             Console.WriteLine("|---------|-----------|------|-------|--------------|");
-            Console.WriteLine (Print);
+            Console.WriteLine (Print);                                             |
             Console.WriteLine("|---------------------------------------------------|");
-
-
 
             Console.WriteLine("Enter 1 to go back to menu");
             string input = Console.ReadLine();
